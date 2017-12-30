@@ -1,0 +1,16 @@
+<div class="modal-container" id="meal_template_form" style="display: none;">
+
+  <div class="modal-content">
+    <%= form_for(MealTemplate.new) do |f| %>
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

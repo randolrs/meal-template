@@ -1,0 +1,66 @@
+<div class="signup-background"></div>
+
+<div class="signup-container">
+
+  <div class="signup-container__form">
+    <div class="signup-container__form__header">
+      <header>Enter Your Payment Information</header>
+    </div>
+
+    <div class="signup-container__form__container">
+      <form method='post' action='/payments'>
+
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+        <div class="field">
+          <label class='signup-container__form__label'>Credit Card Number</label><br />
+          <input class='signup-container__form__input' name='cc_number' type='text'></input>
+        </div>
+
+        <div class="field">
+          <label class='signup-container__form__label'>Name on Card</label><br />
+          <input class='signup-container__form__input' name='cc_name' type='text'></input>
+        </div>
+
+        <div class="field">
+          <label class='signup-container__form__label'>EXP Month</label><br />
+          <select name='cc_exp_month'>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+
+          </select>
+        </div>
+
+        <div class="field">
+          <label class='signup-container__form__label'>EXP Year</label><br />
+          <select name='cc_exp_year'>
+            <% currentYear = Time.now.year %>
+            <% for i in 0..9 do %>
+              <% optionYear = currentYear + i %>
+              <option value="<%= optionYear %>"><%= optionYear %></option>
+            <% end %>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class='signup-container__form__label'>CVC</label><br />
+          <input class='signup-container__form__input' name='cc_cvc' type='text'></input>
+        </div>
+
+        <div class="actions">
+          <input type="submit" value="Add Payment Method"></input>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

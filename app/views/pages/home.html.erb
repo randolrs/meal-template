@@ -1,0 +1,8 @@
+<div class="content">
+
+  <% @meal_templates.each do |meal_template| %>
+    <%= render 'meal_templates/index_show', meal_template: meal_template %>
+  <% end %>
+
+  <a class="open-modal" data-modal-id="meal_template_form">Create Meal Template</a>
+</div>

@@ -1,0 +1,30 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'vars'
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, ul, li
+  margin: 0px
+  padding: 0px
+
+.main-content
+  margin-top: $navigation-height
+  &.hidden_nav
+    margin-top: 0px
+
+.content
+  max-width: 1200px
+  padding: 50px
+  margin: 0 auto
+
+.card
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2)
+
+ul.horizontal-list
+  display: inline-block
+  list-style: none
+  li
+    display: inline-block
+    a
+      display: block

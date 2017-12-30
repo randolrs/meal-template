@@ -1,0 +1,2 @@
+class MealTemplate < ApplicationRecord
+end

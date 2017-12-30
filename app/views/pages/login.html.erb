@@ -1,0 +1,28 @@
+<div class="signup-background"></div>
+
+<div class="signup-container">
+
+  <div class="signup-container__form">
+    <div class="signup-container__form__header">
+      <header>Title</header>
+    </div>
+    <div class="signup-container__form__container">
+      <%= form_for(:user, url: session_path(:user)) do |f| %>
+        <div class="field">
+          <%= f.label :email, class: 'signup-container__form__label' %><br />
+          <%= f.email_field :email, autofocus: true, class: 'signup-container__form__input' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, class: 'signup-container__form__label' %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'signup-container__form__input' %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

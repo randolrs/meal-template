@@ -1,0 +1,8 @@
+<div class="card meal-template-index">
+  <%= meal_template.name %>
+  <br><br>
+  <%= link_to 'View Details', meal_template %>
+  <%= link_to 'Embed this Template', show_embed_path(meal_template.id) %>
+  <%= link_to 'Edit', edit_meal_template_path(meal_template) %>
+  <%= link_to 'Destroy', meal_template, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
